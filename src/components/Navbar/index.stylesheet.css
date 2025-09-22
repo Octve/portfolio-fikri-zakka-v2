@@ -1,0 +1,37 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 0.1rem; /* Space between the buttons */
+  width: fit-content;
+  padding: 0.4rem;
+  margin: 2rem auto;
+}
+
+.navbar-button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-button:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-button {
+  background-color: transparent;
+  color: #000;
+  border-radius: 16px; /* Adjust as needed */
+}
+
+.contact-button {
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 50px; /* Highly rounded corners */
+}
