@@ -1,0 +1,69 @@
+section.hero-section {
+  position: relative;
+
+  display: flex;
+  min-height: 80vh;
+
+  .text-content {
+    flex: 1;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    .role {
+      font-size: 2rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .name {
+      font-size: 9rem;
+      font-weight: 900;
+      color: #4a90e2;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0;
+    }
+  }
+  .image-content {
+    background-color: yellow;
+    width: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+
+    img.profile-pic {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .quote-content {
+    flex: 1;
+    background-color: blue;
+  }
+}
+
+// components
+.circle {
+  position: absolute;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
+  &.circle-large {
+    width: 180%;
+    height: 180%;
+    transform: translate(-10%, 0%);
+  }
+
+  &.circle-small {
+    width: 120%;
+    height: 120%;
+    transform: translate(-5%, 0%);
+  }
+}
