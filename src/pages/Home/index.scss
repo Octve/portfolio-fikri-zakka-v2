@@ -1,16 +1,18 @@
 section.hero-section {
   position: relative;
+  overflow: hidden;
 
   display: flex;
   min-height: 80vh;
 
   .text-content {
     flex: 1;
-    height: 50vh;
+    height: 60vh;
     display: flex;
+    z-index: 2;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
+    // background-color: red;
     .role {
       font-size: 2rem;
       color: #555;
@@ -27,7 +29,7 @@ section.hero-section {
     }
   }
   .image-content {
-    background-color: yellow;
+    // background-color: yellow;
     width: 50%;
 
     position: absolute;
@@ -35,16 +37,34 @@ section.hero-section {
     top: 50%;
     transform: translate(-50%, -50%);
     height: 80vh;
+    z-index: 5;
 
     img.profile-pic {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      position: inherit;
     }
   }
   .quote-content {
-    flex: 1;
-    background-color: blue;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    height: 600vh;
+    z-index: 3;
+    // background-color: blue;
+    .quote-mark {
+      font-size: 120px;
+      line-height: 0.1;
+      font-weight: 600;
+      color: #4a90e2;
+    }
+    .summary-text {
+      font-size: 16px;
+      color: #4d4d4d;
+    }
   }
 }
 
@@ -53,17 +73,21 @@ section.hero-section {
   position: absolute;
   border: 2px solid #ccc;
   border-radius: 50%;
-  z-index: 5;
+  // z-index: 0;
   pointer-events: none;
   &.circle-large {
-    width: 180%;
-    height: 180%;
-    transform: translate(-10%, 0%);
+    width: 80%;
+    height: 140%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -36%);
   }
 
   &.circle-small {
-    width: 120%;
+    width: 60%;
     height: 120%;
-    transform: translate(-5%, 0%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -36%);
   }
 }
